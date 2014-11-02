@@ -1,49 +1,65 @@
-<div class="page page-dashboard" data-ng-controller="FeedCtrl">
+<div data-ng-controller="FeedCtrl">
 
-    <div class="panel panel-default">
-        <div class="panel-body text-center">
-
-            <div class="row search_field">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" ng-model="searchText" placeholder="Type to search here">
-                            <span class="icon glyphicon glyphicon-search"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
+    <div class="spinner" ng-hide="Feeds.finishedloading">
+        <div class="spinner_wheel">
 
         </div>
     </div>
 
-    <div class="row">
-        <div class="span12">
-            <div isotope-container="isotope-container">
-                <div class="col-md-4" isotope-item="isotope-item" data-ng-repeat="categoryPost in Feeds.posts | filter:searchText" data-ng-model="categoryPosts">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
+    <div class="page page-feed" data-ng-controller="FeedCtrl">
 
-                            <img height="200px" width="100%" class="image_item" src="{{categoryPost.imageUrl}}" alt="categoryPost.title"/>
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
 
-                            <h3 ng-bind-html="categoryPost.title">
-
-                            </h3>
-
-                            <p class="text-muted"><a target="_blank" href="{{categoryPost.url}}" ng-bind-html="categoryPost.url"></a></p>
-
-                            <div class="info_text" ng-bind-html="categoryPost.content">
+                <div class="row search_field">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" ng-model="searchText" placeholder="Type to search here">
+                                <span class="icon glyphicon glyphicon-search"></span>
                             </div>
+                        </div>
 
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span12">
+                <div isotope-container="isotope-container">
+                    <div class="col-md-4" isotope-item="isotope-item" data-ng-repeat="categoryPost in Feeds.posts | filter:searchText" data-ng-model="categoryPosts">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <img height="200px" width="100%" class="image_item" src="{{categoryPost.imageUrl}}" alt="categoryPost.title"/>
+
+                                <h3 ng-bind-html="categoryPost.title">
+
+                                </h3>
+
+                                <p class="text-muted"><a target="_blank" href="{{categoryPost.url}}" ng-bind-html="categoryPost.url"></a></p>
+
+                                <div class="info_text" ng-bind-html="categoryPost.content">
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="footer">
+            <p>
+                This website was build by <a target="_blank" href="http://joaogarin.com">Joao Garin</a> in 2014. Powered by <a target="_blank" href="https://angularjs.org/">Angular js framework</a> and <a target="_blank" href="https://getbootstrap.com">Bootstrap</a>. All content is provide by <a href="http://data.nasa.gov/api-info/">NASA API</a> and <a href="https://www.flickr.com/services/api/">Flickr API</a>.
+            </p>
+        </div>
+
+    </div>
 </div>
+
   

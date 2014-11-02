@@ -14,7 +14,7 @@
         data-highlight-active>
         <li data-ng-repeat="menuItem in Feeds.categories" data-ng-model="menuItems">
             <a style="color:{{menuItem.description}}" href="javascript:;" data-ng-click="changeFeeds(menuItem.title)">
-                <i class="fa fa-arrow-circle-right"></i> <span>{{menuItem.title}}</span>
+                <i class="fa {{menuItem.iconName}}"></i> <span>{{menuItem.title}}</span>
             </a>
         </li>
         <li>

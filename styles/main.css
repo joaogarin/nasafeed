@@ -7585,3 +7585,20 @@ Theme specifics
 .masonry-brick .panel{
 
 }
+
+.spinner{
+    background:#fff;
+    opacity:0.9;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 100;
+}
+
+.spinner .spinner_wheel{
+    width:100%;
+    z-index: 105;
+    position:absolute;
+    height:100%;
+    background:url(img/ajax-loader.gif) no-repeat center center;
+}

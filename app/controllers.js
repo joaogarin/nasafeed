@@ -27,5 +27,7 @@ angular.module("app").controller("NasaAppCtrl", ["$scope", "$location",
 
         $scope.Feeds = NasaFeed;
 
+        $scope.finishedloading = NasaFeed.finishedloading;
+
 
     }]);
