@@ -58,8 +58,8 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    hostname: 'localhost',
-                    port: 8888
+                    hostname: 'localhost/nasaFeed',
+                    port: 8080
                 }
             }
         },
@@ -126,11 +126,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bower-task');
-    grunt.loadNpmTasks('grunt-karma');
+    //grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
     grunt.registerTask('test', [ 'bower', 'jshint' ]);
     grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
-    grunt.registerTask('package', [ 'bower', 'jshint', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
-        'clean:temp', 'compress:dist' ]);
+    /*grunt.registerTask('package', [ 'bower', 'jshint', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
+        'clean:temp', 'compress:dist' ]);*/
 };

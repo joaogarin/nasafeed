@@ -19,34 +19,34 @@ angular.module("app").factory('NasaFeed', function($http) {
                 _.each(Feeds.categories,function(category){
                     switch(category.title){
                         case "Aeronautics":
-                            category.iconName = "fa-plane "
+                            category.iconName = "fa-plane ";
                             break;
                         case "Climate":
-                            category.iconName = "fa-recycle"
+                            category.iconName = "fa-recycle";
                             break;
                         case "Catalog":
-                            category.iconName = "fa-tags"
+                            category.iconName = "fa-tags";
                             break;
                         case "Catalog":
-                            category.iconName = "fa-book"
+                            category.iconName = "fa-book";
                             break;
                         case "Earth Science":
-                            category.iconName = "fa-globe"
+                            category.iconName = "fa-globe";
                             break;
                         case "Earth Science":
-                            category.iconName = "fa-gears"
+                            category.iconName = "fa-gears";
                             break;
                         case "Institutional":
-                            category.iconName = "fa-institution"
+                            category.iconName = "fa-institution";
                             break;
                         case "Life Science":
-                            category.iconName = "fa-leaf"
+                            category.iconName = "fa-leaf";
                             break;
                         case "Operations":
-                            category.iconName = "fa-gavel"
+                            category.iconName = "fa-gavel";
                             break;
                         case "Space Science":
-                            category.iconName = "fa-space-shuttle"
+                            category.iconName = "fa-space-shuttle";
                             break;
                         default:
                             category.iconName = "fa-arrow-circle-right";

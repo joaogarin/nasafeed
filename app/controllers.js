@@ -20,7 +20,7 @@ angular.module("app").controller("NasaAppCtrl", ["$scope", "$location",
 
                 $scope.Feeds.UpdateItemsOfCategory(selectedCategory);
 
-            }
+            };
 
        }
     ]).controller("FeedCtrl", ["$scope","NasaFeed", function($scope,NasaFeed) {
