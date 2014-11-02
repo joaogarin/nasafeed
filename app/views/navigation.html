@@ -1,0 +1,23 @@
+
+<!-- Logo -->
+<div class="logo" data-ng-controller="NasaAppCtrl">
+    <a href="#/">
+        <i class="logo-icon fa fa-rocket"></i>
+        <span>{{info.theme_name}}</span>
+    </a>
+</div>
+<div id="nav-wrapper">
+    <ul id="nav"
+        data-ng-controller="NavCtrl"
+        data-slim-scroll
+        data-collapse-nav
+        data-highlight-active>
+        <li data-ng-repeat="menuItem in Feeds.categories" data-ng-model="menuItems">
+            <a style="color:{{menuItem.description}}" href="javascript:;" data-ng-click="changeFeeds(menuItem.title)">
+                <i class="fa fa-arrow-circle-right"></i> <span>{{menuItem.title}}</span>
+            </a>
+        </li>
+        <li>
+    </ul>
+
+</div>

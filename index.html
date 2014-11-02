@@ -1,0 +1,87 @@
+<!doctype html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>NASA Feed</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- needs images, font... therefore can not be part of ui.css -->
+        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="fonts/weather-icons/css/weather-icons.min.css">
+        <!-- end needs images -->
+
+
+        <script src="scripts/vendor/jquery-2.1.1.min.js"></script>
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="styles/main.css">
+
+    </head>
+    <body data-ng-app="app" id="app" data-custom-background="" data-off-canvas-nav="">
+
+        <div data-ng-controller="NasaAppCtrl">
+            <div data-ng-hide="checkIfOwnPage()" data-ng-cloak="" class="no-print">
+
+
+                <aside data-ng-include=" 'app/views/navigation.html' " id="nav-container"></aside>
+            </div>
+
+            <div class="view-container">
+
+                <div data-ng-hide="checkIfOwnPage()" data-ng-cloak="" class="no-print">
+                    <section data-ng-include=" 'app/views/header.html' " id="header" class="top-header"></section>
+                </div>
+
+                <section data-ng-view="" id="content" class="animate-fade-up"></section>
+            </div>
+        </div>
+
+        <script src="scripts/vendor/angular.min.js"></script>
+
+        <script src="scripts/vendor/angular-animate.min.js"></script>
+
+        <script src="scripts/vendor/angular-route.min.js"></script>
+
+        <script src="scripts/vendor/rocha.js"></script>
+
+        <script src="scripts/vendor/angular-sanitize.min.js"></script>
+
+        <script src="scripts/vendor/underscore-min.js"></script>
+
+        <script src="scripts/vendor/imagesloaded.pkgd.min.js"></script>
+
+        <script src="scripts/vendor/lodash.min.js"></script>
+
+        <script src="scripts/vendor/jquery.isotope.min.js"></script>
+
+        <script src="scripts/vendor/angular-wizard.js"></script>
+
+        <script src="scripts/vendor/angular-ui-tree.js"></script>
+
+        <!--<script type="text/javascript" src="dist/app.js"></script>-->
+
+        <script src="app/app.js"></script>
+
+        <script src="app/controllers.js"></script>
+
+        <script src="app/services.js"></script>
+
+        <script src="app/directives.js"></script>
+
+        <script src="scripts/extras.js"></script>
+
+    </body>
+</html>
